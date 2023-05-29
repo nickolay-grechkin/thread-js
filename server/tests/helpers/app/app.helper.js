@@ -9,7 +9,9 @@ const buildApp = () => {
   });
 
   beforeAll(async () => {
-    await app.ready();
+    await app.ready(() => {
+      app.swagger();
+    });
   });
 
   afterAll(async () => {
